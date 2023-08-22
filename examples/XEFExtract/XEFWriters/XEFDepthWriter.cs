@@ -87,9 +87,13 @@ namespace XEFExtract
         {
             // Write initial headers
             _writer.Write(EventCount); // 8 bytes -- RESERVED (this is updated after enumerating through all the frames)
+            Console.WriteLine("eventCount", EventCount);
             _writer.Write(NuiConstants.STREAM_DEPTH_WIDTH); // 4 bytes
+            Console.WriteLine("streamDepth", NuiConstants.STREAM_DEPTH_WIDTH);
             _writer.Write(NuiConstants.STREAM_DEPTH_HEIGHT); // 4 bytes
+            Console.WriteLine("streamHeight", NuiConstants.STREAM_DEPTH_HEIGHT);
             _writer.Write(_depthframesize); // 4 bytes
+            Console.WriteLine("depthFrameSize", _depthframesize);
         }
 
         private void UpdateFrameCount()

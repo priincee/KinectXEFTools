@@ -6,9 +6,9 @@ namespace XEFExtract
 {
     class Program
     {
-        static bool videoFlag = false;
-        static bool skeletonFlag = false;
-        static bool depthFlag = false;
+        static bool videoFlag = true;
+        static bool skeletonFlag = true;
+        static bool depthFlag = true;
         static bool resumeFlag = false;
         static bool stdinFlag = false;
 
@@ -65,6 +65,7 @@ namespace XEFExtract
         {
             if (args.Length == 0)
             {
+                Console.WriteLine("here");
                 Console.WriteLine("No input file/directory provided.");
                 WriteUsage();
                 return;

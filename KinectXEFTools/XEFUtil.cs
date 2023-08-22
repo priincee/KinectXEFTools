@@ -16,8 +16,8 @@ namespace KinectXEFTools
         public const uint AUDIO_MAX_SUBFRAMES = 8;
         public const uint MAX_AUDIO_FRAME_SIZE = 115344;
         public const uint STREAM_BODY_INDEX_HEIGHT = 424;
-        public const uint STREAM_COLOR_HEIGHT = 1080;
-        public const uint STREAM_COLOR_WIDTH = 1920;
+        public const uint STREAM_COLOR_HEIGHT = 424;
+        public const uint STREAM_COLOR_WIDTH = 512;
         public const uint STREAM_IR_HEIGHT = 424;
         public const uint STREAM_IR_WIDTH = 512;
         public const uint STREAM_DEPTH_HEIGHT = 424;

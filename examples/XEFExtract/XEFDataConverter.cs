@@ -70,7 +70,7 @@ namespace XEFExtract
             string rgbVideoPath = basePath + "_RGB.avi";
             string wavAudioPath = basePath + "_Audio.wav";
             string fulVideoPath = basePath + "_Video.avi";
-            string skeletonPath = basePath + "_Skeleton.txt";
+            string skeletonPath = basePath + "_Skeleton.csv";
             string depthDatPath = basePath + "_Depth.dat";
 
             bool videoFlag = UseVideo;
@@ -97,7 +97,7 @@ namespace XEFExtract
                 if (videoFlag)
                 {
                     dataWriters.Add(new XEFColorWriter(rgbVideoPath));
-                    dataWriters.Add(new XEFAudioWriter(wavAudioPath));
+                    //dataWriters.Add(new XEFAudioWriter(wavAudioPath));
                 }
 
                 if (skeletonFlag)
@@ -165,8 +165,7 @@ namespace XEFExtract
                                 (containsAudio ? $"-i \"{wavAudioPath}\" " : "") +
                                 $"-codec copy " +
                                 $"-shortest " +
-                                $"-y " +
-                                $"\"{fulVideoPath}\"",
+                                $"-y ",
                             UseShellExecute = false,
                             CreateNoWindow = true,
                         };
